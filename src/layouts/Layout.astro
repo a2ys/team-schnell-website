@@ -3,14 +3,64 @@ import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.astro";
 import { AOSInit } from "../scripts/AOSInit";
+
+const { title } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+
+    <title>{title} • Team Schnell</title>
+    <meta name="title" content={`${title} • Team Schnell`} />
+    <meta
+      name="description"
+      content="Team Schnell is a creative and innovative group of developers, building impactful web solutions and open source tools."
+    />
+    <meta
+      name="keywords"
+      content="Team Schnell, Schnell, Open Source, Developer Team, Web Development, VIT Chennai, Aayush Shukla, Bhargavi Deshmukh, Koshambi Bardhan, Amal M Raju"
+    />
+    <meta name="author" content="Team Schnell" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://schnell.dunder.in" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://schnell.dunder.in/" />
+    <meta property="og:title" content={`${title} • Team Schnell`} />
+    <meta
+      property="og:description"
+      content="Team Schnell is a creative and innovative group of developers, building impactful web solutions and open source tools."
+    />
+    <meta
+      property="og:image"
+      content="https://schnell.dunder.in/og-image.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://schnell.dunder.in/" />
+    <meta property="twitter:title" content={`${title} • Team Schnell`} />
+    <meta
+      property="twitter:description"
+      content="Team Schnell is a creative and innovative group of developers, building impactful web solutions and open source tools."
+    />
+    <meta
+      property="twitter:image"
+      content="https://schnell.dunder.in/og-image.png"
+    />
+
+    <!-- Google Fonts + Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,7 +74,6 @@ import { AOSInit } from "../scripts/AOSInit";
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Astro</title>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100">
     <Navbar client:load />
