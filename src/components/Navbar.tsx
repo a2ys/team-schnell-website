@@ -90,7 +90,7 @@ const Navbar = () => {
                 href="/work"
                 className="text-white no-underline text-3xl font-semibold block relative overflow-hidden group-hover:bg-white/5 transition-all duration-200"
               >
-                <div className="relative text-4xl px-10 py-12 z-10">
+                <div className="relative text-3xl sm:text-4xl px-10 py-12 z-10">
                   Our Work
                 </div>
               </a>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 href="/about"
                 className="text-white no-underline text-3xl font-semibold block relative overflow-hidden group-hover:bg-white/5 transition-all duration-200"
               >
-                <div className="relative text-4xl px-10 py-12 z-10">
+                <div className="relative text-3xl sm:text-4xl px-10 py-12 z-10">
                   About Us
                 </div>
               </a>
